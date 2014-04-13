@@ -44,6 +44,7 @@ setup_ccache() {
 
   export CCACHE_BASEDIR="${RUBY_BUILD_BUILD_PATH}"
   export CC="ccache $(command -v "$CC" || command -v "cc" || true)"
+  export CXX="ccache $(command -v "$CXX" || command -v "c++" || true)"
 }
 
 if [ -n "$RBENV_CCACHE_DISABLE" ]; then
